@@ -24,3 +24,8 @@ display: block;
     margin-bottom: 50px;
 }
 
+@media screen and (max-width:  800px) {
+  .MainOneLeft__img{
+      margin: 0 auto;
+  }
+}
