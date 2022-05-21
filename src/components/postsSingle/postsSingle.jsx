@@ -7,7 +7,8 @@ export const PostSingle = () =>{
     const postId = useParams();
     const [posts, setPosts] =useState({});
     useEffect(() =>{
-        fetch(process.env.REACT_APP_URL + '/posts/' + postId.postId)
+        // eslint-disable-next-line
+        fetch('https://jsonplaceholder.typicode.com' + '/posts/' + postId.postId)
         .then(response => response.json())
         .then(data => setPosts(data))
        }, [postId]);
