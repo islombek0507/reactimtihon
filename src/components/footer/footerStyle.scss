@@ -1,0 +1,78 @@
+footer{
+    background-color: #000000;
+    
+}
+.footer__container{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(../../assets/img/Subtract.svg);
+        opacity: .05;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 500px;
+        height: 300px;
+        left: 100px;
+        z-index: 5;
+    }
+  
+}
+.footer__logo{
+    display: block;
+    margin: 0;
+    flex-grow: 1;
+}
+.footer__l{
+   margin-top: 40px;
+}
+.footer__nav{
+ display: flex;
+ margin-top: 20px;
+
+}
+.footer__list{
+    padding: 0;
+    list-style: none;
+}
+.footer__div{
+    margin-left: 100px;
+}
+.footer__item{
+    color: #fff;
+    
+}
+.footer__link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+   &--active{
+       text-decoration: underline;
+   }
+}
+.white{
+    font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+color: #FFFFFF;
+}
+@media screen and (max-width:  1310px) {
+  .footer__container{
+      flex-direction: column;
+  }
+  .footer__nav{
+      flex-direction: column;
+  }
+  .footer__div{
+      margin: 0;
+  }
+}
