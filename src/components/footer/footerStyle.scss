@@ -67,6 +67,7 @@ color: #FFFFFF;
 }
 @media screen and (max-width:  800px) {
   .footer__container{
+      max-width: 320px;
       flex-direction: column;
       &::after{
           width: 250px;
