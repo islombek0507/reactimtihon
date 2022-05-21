@@ -1,3 +1,14 @@
+@keyframes open {
+    0% {
+      transform: translateY(-100%) ;
+     z-index: 2;
+    }
+    100% {
+      transform: translateY(0);
+    
+    }
+  }
+ 
 .header__container{
     display: flex;
     align-items: center;
@@ -77,6 +88,9 @@ background-image: url(../../assets/img/lupa.svg);
 background-position: center;
 background-repeat: no-repeat;
 width: 50px;
+&:hover{
+    background-color: #fa9f18;
+}
 }
 .burger{
     display: none;
@@ -84,7 +98,7 @@ width: 50px;
     background: none;
     
 }
-@media screen and (max-width:  1200px) {
+@media screen and (max-width:  800px) {
     .header__container{
         flex-direction: column;
         position: relative;
@@ -138,14 +152,14 @@ width: 50px;
       display: block;
       height: 1px;
       width: 24px;
-      border: 1px solid #b30a0a;
+      border: 1px solid #000;
       
   }
   .burger__close .burger__span{
     display: none;
   }
   .burger__close{
-
+   
 
     &::after{
         top: 8px;
@@ -164,16 +178,18 @@ width: 50px;
       margin-top: 100px;
   }
   .header__nav--open{
+    animation: open .5s linear;
       display: block;
       position: absolute;
       background-color: white;
       z-index: 2;
-      width: 100%;
+      width: 320px;
       top: 0;
       left: 0;
       padding-top: 100px;
       padding-bottom: 100px;
   }
+  
   .header__list{
       flex-direction: column;
      width: 100%;

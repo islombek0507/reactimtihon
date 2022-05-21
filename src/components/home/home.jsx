@@ -32,7 +32,7 @@ export const Home=()=>{
                
                 <Route path="/" element = { < MainLeftPost />} />
                 <Route path="/posts/:postId" element ={<MainOne />} />
-                {/* <Route path="*" element = { < Error />} /> */}
+              
                
             </Routes>
         
@@ -55,7 +55,7 @@ export const Home=()=>{
                
                <Route path="/" element = { < Footer />} />
                <Route path="/posts/:postId" element ={<Footer />} />
-               {/* <Route path="*" element ={<Error />} /> */}
+             
               
               
            </Routes>

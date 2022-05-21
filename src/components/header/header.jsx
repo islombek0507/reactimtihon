@@ -1,8 +1,21 @@
+import { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './headerStyle.scss'
 export const Header=()=>{
+
+  const burgerRef = useRef();
+  const navRef = useRef()
+ 
+  function hendleBurger() {
+   burgerRef.current.classList.toggle('burger__close');
+  
+   navRef.current.classList.toggle('header__nav--open');
+  
+  }
+  
+ 
     return (<>
-        
+  
         <header>
             <div className="container header__container">
 
@@ -16,7 +29,7 @@ export const Header=()=>{
                </Link>
                 </div>
                 <div className="header__right">
-                    <nav className="header__nav ">
+                    <nav ref={navRef} className="header__nav ">
                         <ul className="header__list">
                             <li className="header__item">
                               <NavLink to={'/'} className={({isActive}) =>isActive? 'header__link--active header__link ': 'header__link'}>All</NavLink>
@@ -35,7 +48,8 @@ export const Header=()=>{
                                 </li>
                         </ul>
                     </nav>
-                    <div className="burger__div"><button className="burger "><span className="burger__span"></span></button></div>
+                    <div className="burger__div" >
+                      <button onClick={hendleBurger} ref={burgerRef} className="burger"><span className="burger__span"></span></button></div>
                     <div className="form"> <input className="form__input" type="text" placeholder="search" /> <button className="form__btn"></button></div>
                 </div>
             </div>

@@ -1,5 +1,15 @@
+import { Header } from "../header/header"
+import {Footer} from '../footer/footer'
+import '../disign/disignStyle.scss';
 export const Typhography = () =>{
     return (
-        <h1>Typhography</h1>
+        <>
+        <Header />
+        <div className="welcome">
+        <h1>Topography</h1>
+
+        </div>
+       <Footer />
+        </>
     )
 }

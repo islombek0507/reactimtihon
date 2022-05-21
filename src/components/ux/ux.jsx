@@ -1,5 +1,15 @@
+import { Header } from "../header/header"
+import {Footer} from '../footer/footer'
+import '../disign/disignStyle.scss';
 export const Ux = () =>{
     return (
-        <h1>Ux</h1>
+        <>
+        <Header />
+        <div className="welcome">
+        <h1>UX</h1>
+
+        </div>
+       <Footer />
+        </>
     )
 }
